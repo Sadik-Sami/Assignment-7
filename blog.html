@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+
+<body>
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center container mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Quiz and be amazed!
+                </p>
+            </div>
+            <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+                onclick="window.location.href='index.html';">
+                Quiz
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto text-justify my-4 space-y-12">
+            <div class="flex gap-8 flex-col shadow-lg p-4 border border-green-500 rounded-lg">
+                <h2 class="text-2xl font-semibold text-red-500">1. Difference among map, filter, foreach and find?</h2>
+                <div class="text-xl font-normal flex flex-col gap-2">
+                    <li>forEach( ), is used to execute the same code on every item in an array but does not change the
+                        array
+                        and it does not return anything.</li>
+                    <li>map( ), is almost same as forEach( ) but map by default returns a list of array and If there are
+                        nothing to return then map returns an empty array</li>
+                    <li>filter( ), is used to pick all the matching elements which fulfills the condition given.</li>
+                    <li>find( ), is almost same with filter( ) but it only returns or picks out the first matching
+                        element.
+                    </li>
+                </div>
+            </div>
+            <div class="flex gap-8 flex-col shadow-lg p-4 border border-green-500 rounded-lg">
+                <h2 class="text-2xl font-semibold text-red-500">2. Difference among local storage, session storage and
+                    cookies?</h2>
+                <div class="text-xl font-normal flex flex-col gap-2">
+                    <p>Local storage, session storage, and cookies are all mechanisms available in web browsers to store
+                        data on the client-side, meaning on the user's computer or device, rather than on the server</p>
+                    <li>Local storage: This is a mechanism that allows web apps to store data in the user's web browser.
+                        The data stored in local storage stays stored even after the browser is closed and reopened.
+                    </li>
+                    <li>
+                        Session storage: This is similar to local storage, but the data stored in session storage is
+                        only accessible in the same browser tab or window, and it is cleared when the tab or window is
+                        closed.
+                    </li>
+                    <li>
+                        Cookies are small pieces of text sent to your browser by a website you visit. They help that
+                        website remember information about your visit, which can both make it easier to visit the site
+                        again and make the site more useful to you.Unlike local storage and session storage, cookies are
+                        sent to the server with each request.
+                    </li>
+                </div>
+            </div>
+            <div class="flex gap-8 flex-col shadow-lg p-4 border border-green-500 rounded-lg">
+                <h2 class="text-2xl font-semibold text-red-500">3. what is event loop and how does it work?</h2>
+                <div class="text-xl font-normal flex flex-col gap-2">
+                    <li>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks
+                        from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and
+                        checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack,
+                        waits for the Call Stack to be clear again, and repeats the same process.
+                    </li>
+                </div>
+            </div>
+            <div class="flex gap-8 flex-col shadow-lg p-4 border border-green-500 rounded-lg">
+                <h2 class="text-2xl font-semibold text-red-500">4. explain quiz timer function from no change.js</h2>
+                <div class="text-xl font-normal flex flex-col gap-2">
+                    <p>
+                        The quizTimer function is a timer that counts up from 0 and displays the time in minutes and
+                        seconds. It also changes the color of the timer every 60 seconds and it is updated every 1000ms
+                        or 1s.
+                    </p>
+                    <li>
+                        The function called quizTimer takes a single parameter called dismiss. The function uses an
+                        arrow function syntax and is assigned to a constant variable.At first there is a condition, that
+                        checks whether the dismiss parameter is truthy or falsy, and if it is truthy then the inner
+                        block of code gets executed and it clears the timer interval then returns the function.
+                    </li>
+                    <li>
+                        The function updates the timer display by incrementing a count variable and converting it to
+                        minutes and seconds. countHtml gets the element which has the id "count". There's a global
+                        variable called count which was declared in the index.js file with a initial value of 0. The
+                        covtMin converts the value of count which is updated every second. covtMin uses Math.floor on
+                        the (count/60) part to get the floor value of the divided number which gives us the time in
+                        seconds.
+                        Then the mod just uses %(modulus) to mod the count by 60. We get minutes and seconds from the
+                        mod and the covtMin variables. Although they both have ternary operations in them so basically
+                        we are converting from integer to string and checking the length of the string. If it is 1 that
+                        means the seconds are in single digits then we give the seconds with a 0 in front of the single
+                        digit second value. If not then we give the seconds which consists of double or more digits.
+                    </li>
+                    <li>
+                        Then we set the inner html of the countHTML with the seconds and minutes we got earlier.After
+                        this part the count++ increases the value of count by 1.
+                    </li>
+                    <li>
+                        Now we have a conditional expression to check if the count is greater than 60. Then we nested
+                        another conditional expression inside to check if the mod of the count is equal to 0 (both value
+                        and type) using triple equal notation.If the condition is truthy then we make the more red by
+                        changing the classes of the countHtml. Else we vice-versa the process.
+                    </li>
+                </div>
+            </div>
+            <div class="flex gap-8 flex-col shadow-lg p-4 border border-green-500 rounded-lg">
+                <h2 class="text-2xl font-semibold text-red-500">5. Explain the choose quiz funtion from noChange.js</h2>
+                <div class="text-xl font-normal flex flex-col gap-2">
+                    <p>
+                        The chooseQuiz function takes an index and a given answer as arguments, and updates the answers
+                        array with the
+                        given answer for the quiz at the specified index. If the quiz has already been answered, the
+                        function updates the
+                        existing answer. If the quiz has not been answered, the function adds a new answer to the
+                        answers array then the answers array is thrown inside the displayAnswer function as the parameter.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
